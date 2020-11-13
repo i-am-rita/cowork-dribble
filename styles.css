@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 15px;
+  background-color: #000000;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.features {
+  border: 1px solid #ddd;
+  background: #ddd;
+  margin: 1.5em auto 0;
+  width: 850px;
+  max-width: 98vw;
+  padding: 3em 3em;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3em;
+}
+
+@media screen and (max-width: 600px) {
+  .features {
+    grid-template-columns: 1fr;
+    padding: 2em 0.4em;
+    grid-gap: 1.3em;
+  }
+
+  .features > div {
+    /* margin: auto; */
+    width: 100%;
+  }
+}
+
+.features > .feature {
+  background: #fff;
+  padding: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2.5em;
+}
+
+.features > .feature > div > h4 {
+  position: relative;
+  font-weight: 900;
+}
+
+.features > .feature > div > h4::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  left: 0;
+  bottom: -6px;
+  background: #fa5;
+  height: 2px;
+}
+
+.features > .feature > div > p {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+
+.features > .feature > img {
+  margin-left: 10px;
+}
